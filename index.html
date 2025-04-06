@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <h1>My Portfolio</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="toggle-theme">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Hello, I'm Dhanush R</h2>
+    <p>Frontend Developer | Web Enthusiast</p>
+    <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I’m a frontend developer passionate about building responsive and interactive websites. I enjoy turning complex problems into simple, beautiful designs.</p>
+    <h3>Skills:</h3>
+    <ul class="skills">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React (Basic)</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Weather App</h3>
+      <p>A simple app that shows current weather using OpenWeather API.</p>
+      <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+    </div>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>Built a personal portfolio showcasing projects and skills.</p>
+      <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: dhanushr0524@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/dhanush2405-code/SVM">githubprofile</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/dhanushr2405/">linkedinprofile</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dhanush R. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggleTheme = document.getElementById('toggle-theme');
+  
+    toggleTheme.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+  
+      // Update button icon based on theme
+      if (document.body.classList.contains('dark')) {
+        toggleTheme.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        toggleTheme.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  
+    // Load theme from local storage
+    window.onload = () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark');
+        toggleTheme.textContent = '☀️';
+      } else {
+        toggleTheme.textContent = '🌙';
+      }
+    };
+  </script>
+  
+</body>
+</html>

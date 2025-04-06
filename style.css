@@ -1,0 +1,19 @@
+/* Dark Theme Styling */
+.dark {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  .dark .header nav {
+    background-color: #1f1f1f;
+  }
+  
+  .dark .btn {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .dark a {
+    color: #90caf9;
+  }
+  
